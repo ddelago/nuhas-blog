@@ -413,3 +413,26 @@ footer .copyright {
 li.custom-li {
   background-color: #000;
 }
+
+.carousel-control-prev {
+  left: -3rem;
+}
+
+.carousel-control-next {
+  right: -3rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.carousel-caption {
+  color: black;
+  background-color: white;
+}
+
+.carousel .card-body {
+  text-align: center;
+}

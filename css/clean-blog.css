@@ -470,3 +470,8 @@ hr.hr-text::before {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.carousel-item .card img {
+  width: 100%;
+  height: auto;
+}

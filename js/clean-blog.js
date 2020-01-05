@@ -1,15 +1,6 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // Floating label headings for the contact form
-  $("body").on("input propertychange", ".floating-label-form-group", function(e) {
-    $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-  }).on("focus", ".floating-label-form-group", function() {
-    $(this).addClass("floating-label-form-group-with-focus");
-  }).on("blur", ".floating-label-form-group", function() {
-    $(this).removeClass("floating-label-form-group-with-focus");
-  });
-
   // Show the navbar when the page is scrolled up
   var MQL = 992;
 
@@ -36,6 +27,50 @@
         }
         this.previousTop = currentTop;
       });
+  }
+
+  var num_pages = Object.keys(carousel_items_home).length / 4;
+  if( Object.keys(carousel_items_home).length % 4 != 0 ){
+    num_pages = num_pages + 1;
+  }
+
+  // Add the pages
+  for(var i = 0; i < num_pages; i++) {
+    $(".carousel-inner").append(
+      `
+      <div class="carousel-item ${i == 0? 'active': ''}">
+        <div class="row justify-content-center" id="row-${i}">
+        </div>
+      </div>
+      `
+    )
+
+    $(".carousel-indicators").append(
+      `
+      <li data-target="#carouselExampleIndicators" data-slide-to="${i}" class="custom-li ${i == 0? 'active': ''}"></li>
+      `
+    )
+    
+    // Add the slides (4 per page)
+    for(var j = i * 4; j < (i * 4) + 4; j++) {
+
+      $(`.carousel-inner #row-${i}`).append(
+        `
+        <div class="col-md-3">
+          <div class="card mb-2">
+            <img src=${carousel_items_home[j].img} 
+            class="card-img-top">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-10 text-muted">${carousel_items_home[j].cost} </h6>
+              <p class="card-text">${carousel_items_home[j].description}</p>
+            </div>
+            <a href=${carousel_items_home[j].url} class="stretched-link"></a>
+          </div>
+        </div>
+        `
+      )
+
+    }
   }
 
 })(jQuery); // End of use strict

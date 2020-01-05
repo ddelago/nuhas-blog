@@ -113,6 +113,33 @@ var wardrobe = [
 
 ]
 
+// Items to be featured for each post on the homepage
+var blog_post_items = [
+    {
+        photo_1: '',
+        photo_2: '',
+        category: '',
+        title: '',
+        url: '',
+        product_images: [
+            {
+                img: '',
+                url: ''
+            },
+            {
+                img: '',
+                url: ''
+            },
+            {
+                img: '',
+                url: ''
+            }
+        ]
+    }
+
+]
+
+// Items on the shop page
 var shop = [
 
 ]

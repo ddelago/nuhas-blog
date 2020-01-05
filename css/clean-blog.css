@@ -1,13 +1,13 @@
 /*!
  * Start Bootstrap - Clean Blog v5.0.8 (https://startbootstrap.com/template-overviews/clean-blog)
- * Copyright 2013-2019 Start Bootstrap
+ * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 
 body {
   font-size: 20px;
   color: #212529;
-  padding-top: 5rem;
+  padding-top: 8rem;
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
@@ -110,10 +110,16 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a {
   color: black;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+  #mainNav .navbar-brand {
+    display: contents;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -147,7 +153,7 @@ img::-moz-selection {
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -67px;
+    top: -8rem;
     transition: transform 0.2s;
     border-bottom: 1px solid white;
     background-color: rgba(255, 255, 255, 0.9);
@@ -437,4 +443,9 @@ li.custom-li {
 
 .carousel .card-body {
   text-align: center;
+}
+
+.brand-image {
+  height: 50%;
+  width: 50%;
 }

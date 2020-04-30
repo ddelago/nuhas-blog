@@ -34,7 +34,7 @@
         "bootstrap": "4.3.1",
         "gulp-babel": "^8.0.0",
         "gulp-concat": "^2.6.1",
-        "jquery": "3.4.1"
+        "jquery": "3.5.0"
     },
     "devDependencies": {
         "@babel/core": "^7.7.7",
